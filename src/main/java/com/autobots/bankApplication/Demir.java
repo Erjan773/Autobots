@@ -1,11 +1,10 @@
-package bankApplication;
+package com.autobots.bankApplication;
 
-public class MBank extends BankBase{
+public class Demir extends BankBase{
+    private double balance = 500;
 
-    private double balance = 200;
 
-
-    public MBank (long accountNumber, long routingNumber) throws Exception{
+    public Demir (long accountNumber, long routingNumber) throws Exception{
         super(accountNumber, routingNumber);
         addToAllBankRecords(this);
     }
@@ -17,7 +16,7 @@ public class MBank extends BankBase{
 
     @Override
     public void deposit(double amount) {
-        if (amount < 0 || amount > 200000 ) {
+        if (amount < 0 || amount > 500000 ) {
             throw new IllegalArgumentException("Invalid amount can not be deposite");
         }
         balance += amount;
@@ -26,7 +25,7 @@ public class MBank extends BankBase{
 
     @Override
     public void withDraw(double amount) {
-        if (amount < 0 || amount > 150000){
+        if (amount < 0 || amount > 450000){
             throw new IllegalArgumentException("Invalid amount can not be withDraw");
         }else {
             if (amount > balance) {
@@ -38,3 +37,4 @@ public class MBank extends BankBase{
 
     }
 }
+

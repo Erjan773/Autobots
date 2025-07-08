@@ -1,4 +1,4 @@
-package bankApplication;
+package com.autobots.bankApplication;
 
 public class BankDemo {
     public static void main(String[] args) throws Exception {

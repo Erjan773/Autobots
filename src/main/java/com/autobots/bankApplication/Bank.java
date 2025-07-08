@@ -1,4 +1,4 @@
-package bankApplication;
+package com.autobots.bankApplication;
 
 public interface Bank {
 
